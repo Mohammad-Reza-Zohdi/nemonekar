@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه ورود</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #282c34;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input {
+      margin-left: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ورود</h1>
+    <form id="loginForm">
+      <div>
+        <label>
+          نام کاربری:
+          <input type="text" id="username" required>
+        </label>
+      </div>
+      <div>
+        <label>
+          رمز عبور:
+          <input type="password" id="password" required>
+        </label>
+      </div>
+      <button type="submit">ورود</button>
+    </form>
+  </header>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      console.log('Username:', username);
+      console.log('Password:', password);
+    });
+  </script>
+</body>
+</html>
